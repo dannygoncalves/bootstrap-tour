@@ -652,6 +652,34 @@
 }(jQuery);
 
 (function($, window) {
+  /*******************Language section*************************/
+  var language = localStorage.getItem('NG_TRANSLATE_LANG_KEY');
+  var my_custom_options = '';
+  switch (language) {
+    case 'es':
+      my_custom_options = {
+        'prev': 'Previo',
+        'next': 'Siguiente',
+        'end': 'Finalizar'
+      };
+      break;
+    case 'en':
+      my_custom_options = {
+        'prev': 'Prev',
+        'next': 'Next',
+        'end': 'End'
+      };
+      break;
+    default:
+      my_custom_options = {
+        'prev': 'Previo',
+        'next': 'Siguiente',
+        'end': 'Finalizar'
+      };
+  }
+  /****************End language section************************/
+
+
   var Tour, document;
   document = window.document;
   Tour = (function() {
